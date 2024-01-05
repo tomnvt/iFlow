@@ -1,0 +1,27 @@
+MIDI
+- move transport, metronom, quantization above loopers (hierarchically)
+- add button functionality (buffer for prepared notes)
+- labels for tracks
+- select all note in a row by tapping a label
+- multiple rows selection by dragging in label column
+- playing notes indication
+- instrument change (by changing monitor parameter in Live)
+- preset buttons for kick / snare / hats (+ combination) only
+- undo after moving a note
+- undo after deleting by tapping 
+- playhead
+- playing notes from an array of 128 sub arrays of notes
+- swing / groove
+
+
+AUDIO
+- button for turning off all automations
+- turn off automation after resampling (or maybe clear)
+- set basic live group instruments preset
+- allow sliding on looper bar count
+- add note rebeat button
+- add swing toggle
+- set debounce for down swipe
+- make bar loops appear and dissappear based on the next logical step
+- implement fader behavoir that will reflect current acceleration
+

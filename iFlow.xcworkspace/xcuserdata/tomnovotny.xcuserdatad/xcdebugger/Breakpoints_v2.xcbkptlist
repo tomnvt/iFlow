@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0089BF55-CB2B-4AB7-A9C5-E41C89F4BBD1"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "323ECFF8-1F4E-44B7-BADE-6ADBB1C7592B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Keyboard/Sources/Keyboard/Keyboard.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "init(model:layout:latching:noteOn:noteOff:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "323ECFF8-1F4E-44B7-BADE-6ADBB1C7592B - 51f21b956de7911a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box, Arg[3] = Value Promoted from Box&gt; of closure #1 (Tonic.Pitch, Swift.Bool) -&gt; Keyboard.KeyboardKey in Keyboard.Keyboard&lt; where &#x3c4;_0_0 == Keyboard.KeyboardKey&gt;.init(model: Swift.Optional&lt;Keyboard.KeyboardModel&gt;, layout: Keyboard.KeyboardLayout, latching: Swift.Bool, noteOn: (Tonic.Pitch, __C.CGPoint) -&gt; (), noteOff: (Tonic.Pitch) -&gt; ()) -&gt; Keyboard.Keyboard&lt;Keyboard.KeyboardKey&gt;"
+                  moduleName = "iFlow"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tomnovotny/Projects/Swift/Nvt/iFlow/Keyboard/Sources/Keyboard/Keyboard.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "323ECFF8-1F4E-44B7-BADE-6ADBB1C7592B - 51f21b956de792fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box, Arg[3] = Value Promoted from Box&gt; of closure #1 (Tonic.Pitch, Swift.Bool) -&gt; Keyboard.KeyboardKey in Keyboard.Keyboard&lt; where &#x3c4;_0_0 == Keyboard.KeyboardKey&gt;.init(model: Swift.Optional&lt;Keyboard.KeyboardModel&gt;, layout: Keyboard.KeyboardLayout, latching: Swift.Bool, noteOn: (Tonic.Pitch, __C.CGPoint) -&gt; (), noteOff: (Tonic.Pitch) -&gt; ()) -&gt; Keyboard.Keyboard&lt;Keyboard.KeyboardKey&gt;"
+                  moduleName = "iFlow"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tomnovotny/Projects/Swift/Nvt/iFlow/Keyboard/Sources/Keyboard/Keyboard.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5D1D2E23-3DA9-489E-8221-8D908A12F3C3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Keyboard/Sources/Keyboard/KeyContainer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "5D1D2E23-3DA9-489E-8221-8D908A12F3C3 - f99a4153e64a1006"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Keyboard.KeyContainer.body.getter : some"
+                  moduleName = "iFlow"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tomnovotny/Projects/Swift/Nvt/iFlow/Keyboard/Sources/Keyboard/KeyContainer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "5D1D2E23-3DA9-489E-8221-8D908A12F3C3 - efcdee17b6d2614b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftUI.GeometryProxy) -&gt; &lt;&lt;opaque return type of Keyboard.KeyContainer.rect(rect: __C.CGRect) -&gt; some&gt;&gt;.0 in Keyboard.KeyContainer.body.getter : some"
+                  moduleName = "iFlow"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tomnovotny/Projects/Swift/Nvt/iFlow/Keyboard/Sources/Keyboard/KeyContainer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "588">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F38A74C1-940B-43CA-B4F8-419D3EC97469"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PianoKeyboard/Source/Styles/ClassicStyle.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "naturalColor(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

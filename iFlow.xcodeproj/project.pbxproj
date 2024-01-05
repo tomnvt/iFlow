@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB1B3A8329B3FC12007567C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB1B3A8229B3FC12007567C2 /* Assets.xcassets */; };
+		BB1B3A8629B3FC12007567C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB1B3A8529B3FC12007567C2 /* Preview Assets.xcassets */; };
+		BB1B3AFA29B3FC47007567C2 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B3AE129B3FC27007567C2 /* Main.swift */; };
+		BB2E92602A62CF6C00C3C687 /* PianoRoll in Frameworks */ = {isa = PBXBuildFile; productRef = BB2E925F2A62CF6C00C3C687 /* PianoRoll */; };
+		BB5D57732A5AF10B004A1434 /* Controls in Frameworks */ = {isa = PBXBuildFile; productRef = BB5D57722A5AF10B004A1434 /* Controls */; };
+		BB76879B2B1B1835007CCDF4 /* Keyboard in Frameworks */ = {isa = PBXBuildFile; productRef = BB76879A2B1B1835007CCDF4 /* Keyboard */; };
+		BB8A520C2A3DB02A0050A6EC /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = BB8A520B2A3DB02A0050A6EC /* Core */; };
+		BBAA27D729B48552005BB7F5 /* Midi in Frameworks */ = {isa = PBXBuildFile; productRef = BBAA27D629B48552005BB7F5 /* Midi */; };
+		BBB03B702B1B3E4B008216E4 /* PianoKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = BBB03B6F2B1B3E4B008216E4 /* PianoKeyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BB1B3A7B29B3FC12007567C2 /* iFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB1B3A8229B3FC12007567C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB1B3A8529B3FC12007567C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BB1B3AE129B3FC27007567C2 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		BB5D57742A5B2282004A1434 /* iFlow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iFlow.entitlements; sourceTree = "<group>"; };
+		BB836A2A29F53AD2003FD2AB /* 5. LoopyProPrototype.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5. LoopyProPrototype.png"; sourceTree = "<group>"; };
+		BB836A2B29F53AD2003FD2AB /* 3. MelodyLoopers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3. MelodyLoopers.png"; sourceTree = "<group>"; };
+		BB836A2C29F53AD2003FD2AB /* 4. SongAutomation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4. SongAutomation.png"; sourceTree = "<group>"; };
+		BB836A2D29F53AD2003FD2AB /* 1. InputProcessing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1. InputProcessing.png"; sourceTree = "<group>"; };
+		BB836A2E29F53AD2003FD2AB /* 2. DrumLoopers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2. DrumLoopers.png"; sourceTree = "<group>"; };
+		BBB0603F29B482A700A65224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB1B3A7829B3FC12007567C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBAA27D729B48552005BB7F5 /* Midi in Frameworks */,
+				BBB03B702B1B3E4B008216E4 /* PianoKeyboard in Frameworks */,
+				BB2E92602A62CF6C00C3C687 /* PianoRoll in Frameworks */,
+				BB76879B2B1B1835007CCDF4 /* Keyboard in Frameworks */,
+				BB5D57732A5AF10B004A1434 /* Controls in Frameworks */,
+				BB8A520C2A3DB02A0050A6EC /* Core in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB1B3A7229B3FC12007567C2 = {
+			isa = PBXGroup;
+			children = (
+				BB836A2929F53AD2003FD2AB /* Beardytron */,
+				BB1B3A7D29B3FC12007567C2 /* iFlow */,
+				BB1B3A7C29B3FC12007567C2 /* Products */,
+				BBAA27D529B48552005BB7F5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BB1B3A7C29B3FC12007567C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB1B3A7B29B3FC12007567C2 /* iFlow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB1B3A7D29B3FC12007567C2 /* iFlow */ = {
+			isa = PBXGroup;
+			children = (
+				BB5D57742A5B2282004A1434 /* iFlow.entitlements */,
+				BBB0603F29B482A700A65224 /* Info.plist */,
+				BB1B3AE129B3FC27007567C2 /* Main.swift */,
+				BB1B3A8229B3FC12007567C2 /* Assets.xcassets */,
+				BB1B3A8429B3FC12007567C2 /* Preview Content */,
+			);
+			path = iFlow;
+			sourceTree = "<group>";
+		};
+		BB1B3A8429B3FC12007567C2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BB1B3A8529B3FC12007567C2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BB836A2929F53AD2003FD2AB /* Beardytron */ = {
+			isa = PBXGroup;
+			children = (
+				BB836A2D29F53AD2003FD2AB /* 1. InputProcessing.png */,
+				BB836A2E29F53AD2003FD2AB /* 2. DrumLoopers.png */,
+				BB836A2B29F53AD2003FD2AB /* 3. MelodyLoopers.png */,
+				BB836A2C29F53AD2003FD2AB /* 4. SongAutomation.png */,
+				BB836A2A29F53AD2003FD2AB /* 5. LoopyProPrototype.png */,
+			);
+			path = Beardytron;
+			sourceTree = "<group>";
+		};
+		BBAA27D529B48552005BB7F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB1B3A7A29B3FC12007567C2 /* iFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB1B3A8929B3FC12007567C2 /* Build configuration list for PBXNativeTarget "iFlow" */;
+			buildPhases = (
+				BB1B3A7729B3FC12007567C2 /* Sources */,
+				BB1B3A7829B3FC12007567C2 /* Frameworks */,
+				BB1B3A7929B3FC12007567C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iFlow;
+			packageProductDependencies = (
+				BBAA27D629B48552005BB7F5 /* Midi */,
+				BB8A520B2A3DB02A0050A6EC /* Core */,
+				BB5D57722A5AF10B004A1434 /* Controls */,
+				BB2E925F2A62CF6C00C3C687 /* PianoRoll */,
+				BB76879A2B1B1835007CCDF4 /* Keyboard */,
+				BBB03B6F2B1B3E4B008216E4 /* PianoKeyboard */,
+			);
+			productName = iFlow;
+			productReference = BB1B3A7B29B3FC12007567C2 /* iFlow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB1B3A7329B3FC12007567C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					BB1B3A7A29B3FC12007567C2 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = BB1B3A7629B3FC12007567C2 /* Build configuration list for PBXProject "iFlow" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BB1B3A7229B3FC12007567C2;
+			packageReferences = (
+			);
+			productRefGroup = BB1B3A7C29B3FC12007567C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB1B3A7A29B3FC12007567C2 /* iFlow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB1B3A7929B3FC12007567C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB1B3A8629B3FC12007567C2 /* Preview Assets.xcassets in Resources */,
+				BB1B3A8329B3FC12007567C2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB1B3A7729B3FC12007567C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB1B3AFA29B3FC47007567C2 /* Main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BB1B3A8729B3FC12007567C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BB1B3A8829B3FC12007567C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB1B3A8A29B3FC12007567C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iFlow/iFlow.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iFlow/Preview Content\"";
+				DEVELOPMENT_TEAM = 6YGCZBGEPH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iFlow/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tomloops.iFlow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB1B3A8B29B3FC12007567C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iFlow/iFlow.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iFlow/Preview Content\"";
+				DEVELOPMENT_TEAM = 6YGCZBGEPH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iFlow/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tomloops.iFlow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB1B3A7629B3FC12007567C2 /* Build configuration list for PBXProject "iFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB1B3A8729B3FC12007567C2 /* Debug */,
+				BB1B3A8829B3FC12007567C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB1B3A8929B3FC12007567C2 /* Build configuration list for PBXNativeTarget "iFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB1B3A8A29B3FC12007567C2 /* Debug */,
+				BB1B3A8B29B3FC12007567C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BB2E925F2A62CF6C00C3C687 /* PianoRoll */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PianoRoll;
+		};
+		BB5D57722A5AF10B004A1434 /* Controls */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Controls;
+		};
+		BB76879A2B1B1835007CCDF4 /* Keyboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Keyboard;
+		};
+		BB8A520B2A3DB02A0050A6EC /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+		BBAA27D629B48552005BB7F5 /* Midi */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Midi;
+		};
+		BBB03B6F2B1B3E4B008216E4 /* PianoKeyboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PianoKeyboard;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = BB1B3A7329B3FC12007567C2 /* Project object */;
+}

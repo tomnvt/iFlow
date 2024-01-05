@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:PianoKeyboard">
+   </FileRef>
+   <FileRef
+      location = "group:Keyboard">
+   </FileRef>
+   <FileRef
+      location = "group:PianoRoll">
+   </FileRef>
+   <FileRef
+      location = "group:Controls">
+   </FileRef>
+   <FileRef
+      location = "group:Midi">
+   </FileRef>
+   <FileRef
+      location = "group:Core">
+   </FileRef>
+   <FileRef
+      location = "container:iFlow.xcodeproj">
+   </FileRef>
+</Workspace>
