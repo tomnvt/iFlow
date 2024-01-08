@@ -13,6 +13,7 @@ struct LfoControl: View {
     let title: String
     let baseNote: Int
     let synced: Bool
+    @State var currentlySelectedPatternIndex: Int = 0
 
     var body: some View {
         PrimaryButton(config: .init(
@@ -25,15 +26,23 @@ struct LfoControl: View {
                 )
             )
         ))
-        ForEach(LfoConfig.allCases, id: \.title) { config in
+        ForEach(0 ..< LfoConfig.allCases.count, id: \.self) { configIndex in
+            let config = LfoConfig.allCases[configIndex]
             let channel = Constants.MidiChannels.automation
-            PrimaryButton(title: "\(config.title.uppercased())", interactionStyle: .toggle, midiMessageStyle: .specialAction({
-                midiBus.sendEvent(message: MidiMessage(channel: channel, controller: baseNote + 1, velocity: config.shapeNumber.inMidiRange(originalRange: 1...12)))
-                midiBus.sendEvent(message: MidiMessage(channel: channel, controller: baseNote + 2, velocity: config.rate.rawValue))
-                midiBus.sendEvent(message: MidiMessage(channel: channel, controller: baseNote + 3, velocity: config.phase.inMidiRange(originalRange: 1...360)))
-                midiBus.sendEvent(message: MidiMessage(channel: channel, controller: baseNote + 4, velocity: config.swing.inMidiRange(originalRange: -100...100)))
-
-            }))
+            PrimaryButton(
+                title: "\(config.title.uppercased())",
+                isOn: currentlySelectedPatternIndex == configIndex,
+                interactionStyle: .toggle,
+                midiMessageStyle: .specialAction({
+                    currentlySelectedPatternIndex = configIndex
+                    midiBus.sendEvent(message: MidiMessage(channel: channel, controller: baseNote + 1, velocity: config.shapeNumber.inMidiRange(originalRange: 1...12)))
+                    midiBus.sendEvent(message: MidiMessage(channel: channel, controller: baseNote + 2, velocity: config.rate.rawValue))
+                    midiBus.sendEvent(message: MidiMessage(channel: channel, controller: baseNote + 3, velocity: config.phase.inMidiRange(originalRange: 1...360)))
+                    midiBus.sendEvent(message: MidiMessage(channel: channel, controller: baseNote + 4, velocity: config.swing.inMidiRange(originalRange: -100...100)))
+                    midiBus.sendEvent(message: MidiMessage(channel: channel, controller: baseNote + 5, velocity: config.pwm.inMidiRange(originalRange: -100...100)))
+                    
+                })
+            )
         }
     }
 }
@@ -44,25 +53,30 @@ struct LfoConfig {
     let rate: LfoRate
     let phase: Int // range 0 - 360
     let swing: Int // range -100 - 100
+    let pwm: Int // range  -100 - 100
 
     static var offbeat: LfoConfig {
-        return LfoConfig(title: #function, shapeNumber: 1, rate: .quarter, phase: 266, swing: 0)
+        return LfoConfig(title: "OB", shapeNumber: 1, rate: .quarter, phase: 266, swing: 0, pwm: 0)
     }
 
     static var offbeat2: LfoConfig {
-        return LfoConfig(title: #function, shapeNumber: 2, rate: .sixteenth, phase: 0, swing: 25)
+        return LfoConfig(title: "16S", shapeNumber: 2, rate: .sixteenth, phase: 0, swing: 25, pwm: 0)
     }
 
     static var eight: LfoConfig {
-        return LfoConfig(title: #function, shapeNumber: 2, rate: .thirtyTwoTriplet, phase: 0, swing: 0)
+        return LfoConfig(title: "32", shapeNumber: 2, rate: .thirtyTwoTriplet, phase: 0, swing: 0, pwm: 0)
     }
 
     static var sixteen: LfoConfig {
-        return LfoConfig(title: #function, shapeNumber: 2, rate: .sixteenthDot, phase: 0, swing: 0)
+        return LfoConfig(title: "16.", shapeNumber: 2, rate: .sixteenthDot, phase: 0, swing: 0, pwm: 0)
     }
 
     static var swingSaw: LfoConfig {
-        return LfoConfig(title: #function, shapeNumber: 4, rate: .sixteenth, phase: 0, swing: 28)
+        return LfoConfig(title: "16.S", shapeNumber: 4, rate: .sixteenthDot, phase: 0, swing: 28, pwm: 19)
+    }
+
+    static var swingSaw2: LfoConfig {
+        return LfoConfig(title: "16.T", shapeNumber: 4, rate: .sixteenthTriplet, phase: 0, swing: 0, pwm: 0)
     }
 
     static var allCases: [LfoConfig] {
@@ -71,7 +85,8 @@ struct LfoConfig {
             offbeat2,
             eight,
             sixteen,
-            swingSaw
+            swingSaw,
+            swingSaw2
         ]
     }
 }
