@@ -25,17 +25,17 @@ struct BottomPanel: View {
                 }
                 VStack {
                     HStack {
-                        LfoControl(title: "BASS", baseNote: 30, synced: lfoSynced)
+                        LfoControl(title: "BASS", baseNote: 30, synced: lfoSynced, resamplingNotificationName: .bassResampled)
                         PrimaryButton(config: .addOctaveUp)
                     }
                     HStack {
-                        LfoControl(title: "HARMONY", baseNote: 50, synced: lfoSynced)
+                        LfoControl(title: "HARMONY", baseNote: 50, synced: lfoSynced, resamplingNotificationName: .harmonyResampled)
                         PrimaryButton(title: "SYNC LFO", isOn: lfoSynced, interactionStyle: .toggle, midiMessageStyle: .specialAction({
                             lfoSynced.toggle()
                         }))
                     }
                     HStack {
-                        LfoControl(title: "MELODY", baseNote: 70, synced: lfoSynced)
+                        LfoControl(title: "MELODY", baseNote: 70, synced: lfoSynced, resamplingNotificationName: .melodyResampled)
                         PrimaryButton(config: .addOctaveDown)
                     }
                 }

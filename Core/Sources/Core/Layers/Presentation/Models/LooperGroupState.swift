@@ -5,6 +5,8 @@
 //  Created by Tom Novotny on 26.02.2023.
 //
 
+import Foundation
+
 struct FxState {
     var automationOn = false
     var recordingOn = false
@@ -33,6 +35,7 @@ struct LooperGroupState {
         fxBaseNote: Int,
         barAmounts: [LooperBarAmount],
         resamplingTracksCount: Int,
+        resamplingNotificationName: Notification.Name? = nil,
         trackNames: [String],
         masterResampler: Bool = false,
         volume: Int = 127,
@@ -50,6 +53,7 @@ struct LooperGroupState {
                 baseNote: baseNote,
                 channel: channel,
                 isResampling: (0 ..< resamplingTracksCount + 1).contains(4 - index),
+                resamplingNotificationName: resamplingNotificationName,
                 trackName: trackName
             )
         }
@@ -67,6 +71,7 @@ struct LooperGroupState {
         baseNote: Int,
         channel: Int,
         isResampling: Bool,
+        resamplingNotificationName: Notification.Name?,
         trackName: String
     ) -> LooperState {
         .default(
@@ -75,6 +80,7 @@ struct LooperGroupState {
             baseNote: baseNote + looperIndex * 10,
             channel: channel,
             isResampling: isResampling,
+            resamplingNotificationName: resamplingNotificationName,
             trackName: trackName
         )
     }
@@ -117,6 +123,7 @@ extension LooperGroupState {
                 fxBaseNote: 40,
                 barAmounts: LooperBarAmount.standard,
                 resamplingTracksCount: 2,
+                resamplingNotificationName: .bassResampled,
                 trackNames: [
                     "GUITAR",
                     "SYNTH",
@@ -132,6 +139,7 @@ extension LooperGroupState {
                 fxBaseNote: 60,
                 barAmounts: LooperBarAmount.standard,
                 resamplingTracksCount: 2,
+                resamplingNotificationName: .harmonyResampled,
                 trackNames: [
                     "LAYER 1",
                     "LAYER 2",
@@ -147,6 +155,7 @@ extension LooperGroupState {
                 fxBaseNote: 80,
                 barAmounts: LooperBarAmount.standard,
                 resamplingTracksCount: 2,
+                resamplingNotificationName: .melodyResampled,
                 trackNames: [
                     "PLUCK",
                     "LINE",

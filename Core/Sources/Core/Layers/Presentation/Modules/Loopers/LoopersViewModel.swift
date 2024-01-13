@@ -111,6 +111,9 @@ class LoopersViewModel: ObservableObject {
                 }
             }
             looperMessageInteractor.handleMessage(.resetFx(fxBaseNote: looperStates[state.looperGroupIndex].fxBaseNote))
+            if let resamplingNotificationName = state.resamplingNotificationName {
+                NotificationCenter.default.post(name: resamplingNotificationName, object: nil)
+            }
         } else {
             looperStates[state.looperGroupIndex].looperStates.forEach {
                 if !$0.isResampling && $0.looperIndex == state.looperIndex {

@@ -12,4 +12,7 @@ extension Notification.Name {
     static let spacebarPresed = Self.init("spacebarPresed")
     static let resetAll = Self.init("resetAll")
     static let resetInputFx = Self.init("resetInputFx")
+    static let bassResampled = Self.init("bassResampled")
+    static let harmonyResampled = Self.init("harmonyResampled")
+    static let melodyResampled = Self.init("melodyResampled")
 }

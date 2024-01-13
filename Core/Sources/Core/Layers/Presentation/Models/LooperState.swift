@@ -13,6 +13,7 @@ struct LooperState {
     let baseNote: Int
     let channel: Int
     let isResampling: Bool
+    var resamplingNotificationName: Notification.Name?
     let trackName: String
     var barAmount: Double?
     var loopOn: Bool
@@ -26,6 +27,7 @@ struct LooperState {
         baseNote: Int,
         channel: Int,
         isResampling: Bool,
+        resamplingNotificationName: Notification.Name?,
         trackName: String
     ) -> LooperState {
         .init(
@@ -34,6 +36,7 @@ struct LooperState {
             baseNote: baseNote,
             channel: channel,
             isResampling: isResampling,
+            resamplingNotificationName: resamplingNotificationName,
             trackName: trackName,
             barAmount: nil,
             loopOn: false,

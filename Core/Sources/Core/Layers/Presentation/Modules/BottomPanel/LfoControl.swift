@@ -1,10 +1,11 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by Tom Novotny on 07.01.2024.
 //
 
+import Combine
 import Midi
 import SwiftUI
 
@@ -13,7 +14,10 @@ struct LfoControl: View {
     let title: String
     let baseNote: Int
     let synced: Bool
+    let resamplingNotificationName: Notification.Name
     @State var currentlySelectedPatternIndex: Int = 0
+
+    @State var cancellables = Set<AnyCancellable>()
 
     var body: some View {
         PrimaryButton(config: .init(
@@ -40,9 +44,20 @@ struct LfoControl: View {
                     midiBus.sendEvent(message: MidiMessage(channel: channel, controller: baseNote + 3, velocity: config.phase.inMidiRange(originalRange: 1...360)))
                     midiBus.sendEvent(message: MidiMessage(channel: channel, controller: baseNote + 4, velocity: config.swing.inMidiRange(originalRange: -100...100)))
                     midiBus.sendEvent(message: MidiMessage(channel: channel, controller: baseNote + 5, velocity: config.pwm.inMidiRange(originalRange: -100...100)))
-                    
+
                 })
             )
+        }
+        .onAppear() {
+            NotificationCenter.default.publisher(for: resamplingNotificationName)
+                .sink { _ in
+                    midiBus.sendEvent(message: MidiMessage(
+                        channel: Constants.MidiChannels.automation,
+                        controller: baseNote,
+                        velocity: 0
+                    ))
+                }
+                .store(in: &cancellables)
         }
     }
 }
