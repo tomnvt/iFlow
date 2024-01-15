@@ -29,8 +29,4 @@ class GeneralMessageInteractor {
             )
         }
     }
-
-    func observeMessages(onReceived: @escaping (GeneralMessage) -> Void) {
-        // TODO: Remove
-    }
 }

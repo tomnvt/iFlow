@@ -69,8 +69,6 @@ struct Page2: View {
             }
             InputFxView(layout: .v1, onAction: fxPanelViewModel.onAction)
             VStack {
-//                PianoKeyboardView(viewModel: pianoKeyboardViewModel, style: ClassicStyle(cornerRadiusMultiplier: 0))
-//                    .frame(height: 160)
                 Sampler()
                     .frame(height: 100)
                 Grid {
@@ -107,7 +105,31 @@ struct Page2: View {
                     GridRow {
                         VStack {
                             makeLooperGroup(index: 1, barAmounts: LooperBarAmount.eightLowest, showFxKnobs: false)
-                            makeLooperGroup(index: 0, barAmounts: LooperBarAmount.quaterLowest, showFxKnobs: false)
+                            HStack {
+                                makeLooperGroup(index: 0, barAmounts: LooperBarAmount.quaterLowest, showFxKnobs: false)
+                                VStack {
+                                    PrimaryButton(config:
+                                        .init(
+                                            title: "4x4\nON",
+                                            interactionStyle: .momentary,
+                                            midiMessageStyle: .onOffSame(
+                                                MidiMessage(channel: Constants.MidiChannels.automation, controller: Constants.MidiMessages.Automation.fourByFourOn)
+                                            )
+                                        )
+                                    )
+                                    .frame(width: 50)
+                                    PrimaryButton(config:
+                                            .init(
+                                                title: "4x4\nOFF",
+                                                interactionStyle: .momentary,
+                                                midiMessageStyle: .onOffSame(
+                                                    MidiMessage(channel: Constants.MidiChannels.automation, controller: Constants.MidiMessages.Automation.fourByFourOff)
+                                                )
+                                            )
+                                    )
+                                    .frame(width: 50)
+                                }
+                            }
                         }
                         makeLooperGroup(index: 3, barAmounts: LooperBarAmount.standard)
                     }

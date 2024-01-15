@@ -31,6 +31,7 @@ class LoopersViewModel: ObservableObject {
         observeMessages()
         loadDefaultLooperGroupStates()
 
+        // TODO: This looks like something that could be derived from the looper groups configurations
         addMidiListener(controller: 36, barAmount: 16, looperGroupIndex: 3, looperIndex: 1, barsIndex: 0)
         addMidiListener(controller: 37, barAmount: 8, looperGroupIndex: 3, looperIndex: 1, barsIndex: 1)
         addMidiListener(controller: 38, barAmount: 4, looperGroupIndex: 3, looperIndex: 1, barsIndex: 2)
@@ -52,6 +53,23 @@ class LoopersViewModel: ObservableObject {
         addMidiListener(controller: 53, barAmount: 4, looperGroupIndex: 4, looperIndex: 0, barsIndex: 2)
         addMidiListener(controller: 54, barAmount: 2, looperGroupIndex: 4, looperIndex: 0, barsIndex: 3)
         addMidiListener(controller: 45, barAmount: 1, looperGroupIndex: 4, looperIndex: 0, barsIndex: 4)
+
+        addMidiListener(channel: 2, controller: 6, looperGroupIndex: 0, looperIndex: 0)
+        addMidiListener(channel: 2, controller: 16, looperGroupIndex: 0, looperIndex: 1)
+        addMidiListener(channel: 2, controller: 46, looperGroupIndex: 1, looperIndex: 0)
+        addMidiListener(channel: 2, controller: 56, looperGroupIndex: 1, looperIndex: 1)
+        addMidiListener(channel: 2, controller: 86, looperGroupIndex: 2, looperIndex: 0)
+        addMidiListener(channel: 2, controller: 96, looperGroupIndex: 2, looperIndex: 1)
+        addMidiListener(channel: 2, controller: 106, looperGroupIndex: 2, looperIndex: 2)
+        addMidiListener(channel: 2, controller: 116, looperGroupIndex: 2, looperIndex: 3)
+        addMidiListener(channel: 3, controller: 6, looperGroupIndex: 3, looperIndex: 0)
+        addMidiListener(channel: 3, controller: 16, looperGroupIndex: 3, looperIndex: 1)
+        addMidiListener(channel: 3, controller: 26, looperGroupIndex: 3, looperIndex: 2)
+        addMidiListener(channel: 3, controller: 36, looperGroupIndex: 3, looperIndex: 3)
+        addMidiListener(channel: 3, controller: 46, looperGroupIndex: 4, looperIndex: 0)
+        addMidiListener(channel: 3, controller: 56, looperGroupIndex: 4, looperIndex: 1)
+        addMidiListener(channel: 3, controller: 66, looperGroupIndex: 4, looperIndex: 2)
+        addMidiListener(channel: 3, controller: 76, looperGroupIndex: 4, looperIndex: 3)
     }
 
     func addMidiListener(controller: Int, barAmount: Double, looperGroupIndex: Int, looperIndex: Int, barsIndex: Int) {
@@ -60,6 +78,11 @@ class LoopersViewModel: ObservableObject {
         }))
     }
 
+    func addMidiListener(channel: Int, controller: Int, looperGroupIndex: Int, looperIndex: Int) {
+        midiBus.listeners.append(MidiMessageListener(channel: channel, controller: controller, onMessageReceived: { message in
+            self.onOnButtonTap(state: self.looperStates[looperGroupIndex].looperStates[looperIndex], specificState: message == 127)
+        }))
+    }
 
     func onLooperAction(_ action: LooperGroup.Action) {
         switch action {
@@ -229,22 +252,6 @@ class LoopersViewModel: ObservableObject {
     }
 
     private func observeMessages() {
-        generalMessageInteractor.observeMessages(onReceived: { [weak self] generalMessage in
-            DispatchQueue.main.async {
-                if generalMessage.midiValues.velocity == 127 {
-                    self?.activeActions
-                        .append((generalMessage.midiValues.channel, generalMessage.midiValues.controller))
-                } else {
-                    self?.activeActions
-                        .removeAll(where: {
-                            $0.channel == generalMessage.midiValues.channel && $0.controller == generalMessage
-                                .midiValues
-                                .controller
-                        })
-                }
-            }
-        })
-
         NotificationCenter.default.publisher(for: .resetAll)
             .sink(receiveValue: { [weak self] _ in
                 self?.loadDefaultLooperGroupStates()

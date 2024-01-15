@@ -26,6 +26,8 @@ extension Constants.MidiMessages {
         static let lfoControlsBaseNote = 30
         static let addOctaveUp = 100
         static let addOctaveDown = 101
+        static let fourByFourOn = 90
+        static let fourByFourOff = 91
     }
 
     static let onInstrumentChange: [MidiMessage] = resetArpAndQuan + resetMidiOctaver

@@ -15,4 +15,5 @@ extension Notification.Name {
     static let bassResampled = Self.init("bassResampled")
     static let harmonyResampled = Self.init("harmonyResampled")
     static let melodyResampled = Self.init("melodyResampled")
+    static let kickLoopPressed = Self.init("kickLoopPressed")
 }
