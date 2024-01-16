@@ -69,8 +69,20 @@ struct Page2: View {
             }
             InputFxView(layout: .v1, onAction: fxPanelViewModel.onAction)
             VStack {
-                Sampler()
-                    .frame(height: 100)
+                HStack {
+                    // TODO: Connect to loopers view model
+                    XYPad(
+                        title: "INPUT MASK",
+                        midiChannelX: Constants.MidiChannels.inputFx,
+                        midiControllerX: 10,
+                        midiChannelY: Constants.MidiChannels.inputFx,
+                        midiControllerY: 11
+                    )
+                        .frame(width: 100, height: 100)
+                    Spacer()
+                    Sampler()
+                        .frame(height: 100)
+                }
                 Grid {
                     GridRow {
                         HStack {
